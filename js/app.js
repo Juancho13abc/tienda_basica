@@ -1047,8 +1047,8 @@ function adminView(tab) {
     return `
       <div class="admin-view">
         <div class="admin-heading">
-          <p class="kicker" style="color:#64748b">Resumen General</p>
-          <h2 class="section-title" style="font-size:42px">Panel de <span class="accent">Control</span></h2>
+          <p class="admin-overline">Resumen General</p>
+          <h2 class="admin-view-title">Panel de <span class="accent">Control</span></h2>
         </div>
 
         <div class="metrics admin-metrics-extended">
@@ -1247,6 +1247,38 @@ function initAdminPage() {
     window.location.href = "login.html";
   });
 
+  const menuBtn = document.getElementById("nav-menu-btn");
+  const sidebar = document.querySelector(".admin-sidebar");
+  let overlay = document.getElementById("admin-overlay");
+  
+  if (!overlay && sidebar && menuBtn) {
+    overlay = document.createElement("div");
+    overlay.id = "admin-overlay";
+    overlay.className = "admin-overlay";
+    document.body.appendChild(overlay);
+    
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      sidebar.classList.add("admin-sidebar-open");
+      overlay.classList.add("visible");
+    });
+
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("admin-sidebar-open");
+      overlay.classList.remove("visible");
+    });
+    
+    // Close sidebar on clicking a tab if on mobile
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        if(window.innerWidth <= 1024) {
+          sidebar.classList.remove("admin-sidebar-open");
+          overlay.classList.remove("visible");
+        }
+      });
+    });
+  }
+
   renderAdmin();
 }
 
@@ -1398,6 +1430,45 @@ function initRegisterPage() {
     window.location.href = "index.html";
   });
 }
+
+function initMobileMenu() {
+  const menuBtn = document.getElementById("nav-menu-btn");
+  const closeBtn = document.getElementById("nav-mobile-close");
+  const mobileMenu = document.getElementById("nav-mobile-menu");
+  const mobileLinks = document.querySelectorAll(".nav-mobile-links a, .nav-mobile-links button");
+
+  if (!menuBtn || !mobileMenu || !closeBtn) return;
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      mobileMenu.classList.remove("active");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initMobileMenu();
+  hookBrokenImages();
+  const page = document.body.getAttribute("data-page");
+  if (page === "admin") initAdminPage();
+  else if (page === "login") initLoginPage();
+  else if (page === "register") initRegisterPage();
+  else if (page === "recover") initRecoverPage();
+});
 
 function initAccountGuardOnIcons() {
   document.querySelectorAll("a[href='cuenta.html']").forEach((link) => {

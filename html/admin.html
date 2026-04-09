@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
-</head>
+<link rel="stylesheet" href="../css/responsive.css"></head>
 <body data-page="admin">
   <div class="admin-shell">
     <aside class="admin-sidebar">
@@ -32,13 +32,14 @@
 
     <section class="admin-main">
       <header class="admin-header">
+        <button class="nav-menu-toggle admin-nav-toggle" id="nav-menu-btn"><span class="material-icons">menu</span></button>
         <div class="admin-header-title">
           <p class="admin-overline">Panel ejecutivo</p>
           <h3>Bienvenido, <span class="accent" id="admin-role-label">Administrador</span></h3>
         </div>
         <div class="admin-header-actions">
-          <span class="pill admin-pill">Rol: ADMIN</span>
-          <span class="pill admin-pill" id="admin-user-name">Administrador</span>
+          <span class="pill admin-pill hide-on-mobile">Rol: ADMIN</span>
+          <span class="pill admin-pill hide-on-mobile" id="admin-user-name">Administrador</span>
         </div>
       </header>
       <main class="admin-content" id="admin-content"></main>

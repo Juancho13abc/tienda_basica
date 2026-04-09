@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -9,13 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
-</head>
+<link rel="stylesheet" href="../css/responsive.css"></head>
 <body data-page="about">
   <div class="layout">
-    <nav class="navbar"><div class="container nav-row"><a href="index.html" class="brand"><span class="brand-icon material-icons">shopping_bag</span><span>MODERNA</span></a><div class="nav-links"><a href="index.html">Inicio</a><a href="catalogo.html">Catalogo</a><a class="active" href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div><div class="nav-actions"><form class="nav-search-desktop" data-search-form><input name="search" class="search-input" placeholder="Buscar..."></form><a class="icon-btn" href="login.html"><span class="material-icons">person_outline</span></a><a class="icon-btn" href="carrito.html"><span class="material-icons">shopping_cart</span><span class="badge" data-cart-count>0</span></a></div></div></nav>
+    <nav class="navbar"><div class="container nav-row"><a href="index.html" class="brand"><span class="brand-icon material-icons">shopping_bag</span><span>MODERNA</span></a><div class="nav-links"><a href="index.html">Inicio</a><a href="catalogo.html">Catalogo</a><a class="active" href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div><div class="nav-actions"><form class="nav-search-desktop" data-search-form><input name="search" class="search-input" placeholder="Buscar..."></form><a class="icon-btn" href="login.html"><span class="material-icons">person_outline</span></a><a class="icon-btn" href="carrito.html"><span class="material-icons">shopping_cart</span><span class="badge" data-cart-count>0</span></a><button class="nav-menu-toggle" id="nav-menu-btn"><span class="material-icons">menu</span></button></div></div></nav>
+
     <main class="info-page page" style="background:#ffffff;"><div style="position:relative; min-height:48vh; display:grid; place-items:center; margin-bottom:24px; background:#020617; color:white; overflow:hidden;"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1920" alt="Sobre nosotros" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.4" referrerpolicy="no-referrer"><div class="container" style="position:relative; z-index:2; text-align:center;"><p class="kicker">Nuestra Vision</p><h1 class="section-title" style="font-size:64px">Nuestra <span class="accent">Historia</span></h1><p style="max-width:760px; margin:12px auto 0; color:#cbd5e1">Desde 2010 redefiniendo la forma en que el mundo compra en linea.</p></div></div><div class="container"><div class="grid grid-2"><article class="info-card"><h2 class="section-title" style="font-size:46px; margin-bottom:10px">Pasion por la <span class="accent">Excelencia</span></h2><p class="muted" style="line-height:1.8">Moderna nacio de una idea simple: hacer productos de alta calidad accesibles para todos sin comprometer diseno ni etica de produccion.</p></article><article class="info-card"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800" alt="Equipo" style="border-radius:16px; width:100%; aspect-ratio:4/5; object-fit:cover;" referrerpolicy="no-referrer" /></article></div></div></main>
     <footer class="footer"><div class="container footer-grid"><div><h3 style="font-size:30px; font-family: Inter, sans-serif; font-weight:900; margin-bottom:12px;">MODERNA</h3><p>Elevamos tu estilo con piezas exclusivas y calidad inigualable.</p></div><div><h4>Explorar</h4><p><a href="index.html">Inicio</a></p><p><a href="catalogo.html">Colecciones</a></p><p><a href="sobre-nosotros.html">Nuestra Historia</a></p><p><a href="contacto.html">Contacto</a></p></div><div><h4>Ayuda</h4><p><a href="preguntas-frecuentes.html">Centro de Ayuda</a></p><p><a href="politicas-de-devolucion.html">Devoluciones</a></p><p><a href="terminos-y-condiciones.html">Terminos Legales</a></p><p><a href="envios.html">Seguimiento</a></p></div></div></footer>
   </div>
+
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <button class="nav-mobile-menu-close" id="nav-mobile-close"><span class="material-icons">close</span></button>
+    <div class="nav-mobile-links"><a href="index.html">Inicio</a><a href="catalogo.html">Catalogo</a><a class="active" href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+  </div>
+
   <div id="toast" class="toast" aria-live="polite"></div>
   <script src="../js/app.js"></script>
 </body>
