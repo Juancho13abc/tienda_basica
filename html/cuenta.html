@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderna Store - Cuenta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="account">
+  <div class="layout">
+    <nav class="navbar"><div class="container nav-row"><a href="index.html" class="brand"><span class="brand-icon material-icons">shopping_bag</span><span>MODERNA</span></a><div class="nav-links"><a href="index.html">Inicio</a><a href="catalogo.html">Catalogo</a><a href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div><div class="nav-actions"><form class="nav-search-desktop" data-search-form><input name="search" class="search-input" placeholder="Buscar..."></form><a class="icon-btn" href="login.html"><span class="material-icons">person_outline</span></a><a class="icon-btn" href="carrito.html"><span class="material-icons">shopping_cart</span><span class="badge" data-cart-count>0</span></a></div></div></nav>
+
+    <main class="account-page page">
+      <div class="container account-layout">
+        <aside class="panel">
+          <div style="text-align:center; margin-bottom:16px;">
+            <div style="width:86px; height:86px; border-radius:22px; background:#f8fafc; border:1px solid var(--border); margin:0 auto 10px; display:grid; place-items:center;"><span class="material-icons" style="font-size:38px">person</span></div>
+            <h3 style="margin-bottom:4px;">Juan Perez</h3>
+            <p class="muted">juan.perez@ejemplo.com</p>
+            <p class="kicker" style="color:#64748b; margin-top:8px;">Rol: <span id="account-role">CUSTOMER</span></p>
+          </div>
+          <div class="tabs">
+            <button class="tab-btn active" data-account-tab="orders">Mis pedidos</button>
+            <button class="tab-btn" data-account-tab="profile">Perfil y seguridad</button>
+            <button class="tab-btn" data-account-tab="addresses">Direcciones</button>
+            <button class="tab-btn" data-account-tab="roles">Gestion de roles</button>
+          </div>
+        </aside>
+        <section id="account-content"></section>
+      </div>
+    </main>
+
+    <footer class="footer"><div class="container footer-grid"><div><h3 style="font-size:30px; font-family: Inter, sans-serif; font-weight:900; margin-bottom:12px;">MODERNA</h3><p>Elevamos tu estilo con piezas exclusivas y calidad inigualable.</p></div><div><h4>Explorar</h4><p><a href="index.html">Inicio</a></p><p><a href="catalogo.html">Colecciones</a></p><p><a href="sobre-nosotros.html">Nuestra Historia</a></p><p><a href="contacto.html">Contacto</a></p></div><div><h4>Ayuda</h4><p><a href="preguntas-frecuentes.html">Centro de Ayuda</a></p><p><a href="politicas-de-devolucion.html">Devoluciones</a></p><p><a href="terminos-y-condiciones.html">Terminos Legales</a></p><p><a href="envios.html">Seguimiento</a></p></div></div></footer>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
+

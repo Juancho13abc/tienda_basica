@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderna Store - Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="admin">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <div class="admin-brand">
+        <div class="admin-brand-icon"><span class="material-icons">admin_panel_settings</span></div>
+        <div>
+          <p class="admin-brand-label">Moderna</p>
+          <strong>Control Center</strong>
+        </div>
+      </div>
+      <nav class="admin-nav">
+        <a class="active" href="#" data-admin-tab="dashboard"><span class="material-icons">space_dashboard</span>Dashboard</a>
+        <a href="#" data-admin-tab="products"><span class="material-icons">inventory_2</span>Productos</a>
+        <a href="#" data-admin-tab="orders"><span class="material-icons">receipt_long</span>Pedidos</a>
+        <a href="#" data-admin-tab="customers"><span class="material-icons">groups</span>Clientes</a>
+        <a href="#" data-admin-tab="analytics"><span class="material-icons">insights</span>Analiticas</a>
+      </nav>
+      <button id="admin-exit" class="btn admin-exit-btn"><span class="material-icons">logout</span>Salir de Admin</button>
+    </aside>
+
+    <section class="admin-main">
+      <header class="admin-header">
+        <div class="admin-header-title">
+          <p class="admin-overline">Panel ejecutivo</p>
+          <h3>Bienvenido, <span class="accent" id="admin-role-label">Administrador</span></h3>
+        </div>
+        <div class="admin-header-actions">
+          <span class="pill admin-pill">Rol: ADMIN</span>
+          <span class="pill admin-pill" id="admin-user-name">Administrador</span>
+        </div>
+      </header>
+      <main class="admin-content" id="admin-content"></main>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
+

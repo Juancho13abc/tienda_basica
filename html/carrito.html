@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderna Store - Carrito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="cart">
+  <div class="layout">
+    <nav class="navbar"><div class="container nav-row"><a href="index.html" class="brand"><span class="brand-icon material-icons">shopping_bag</span><span>MODERNA</span></a><div class="nav-links"><a href="index.html">Inicio</a><a href="catalogo.html">Catalogo</a><a href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div><div class="nav-actions"><form class="nav-search-desktop" data-search-form><input name="search" class="search-input" placeholder="Buscar..."></form><a class="icon-btn" href="login.html"><span class="material-icons">person_outline</span></a><a class="icon-btn" href="carrito.html"><span class="material-icons">shopping_cart</span><span class="badge" data-cart-count>0</span></a></div></div></nav>
+
+    <main class="cart-page page">
+      <div class="container">
+        <h1 class="section-title" style="font-size:46px; margin-bottom:18px;">Tu Carrito de Compras</h1>
+        <div id="cart-empty" class="empty" style="display:none;"><h2>Tu carrito esta vacio</h2><p class="muted" style="margin:10px 0 20px">Explora nuestro catalogo y encuentra algo increible.</p><a class="btn btn-primary" href="catalogo.html">Ir al Catalogo</a></div>
+        <div id="cart-layout" class="cart-layout">
+          <div id="cart-items" style="display:grid; gap:12px;"></div>
+          <aside class="cart-summary">
+            <h3 style="font-size:30px; margin-bottom:12px">Resumen</h3>
+            <div style="display:grid; gap:8px; margin-bottom:14px">
+              <div class="row-between"><span class="muted">Subtotal (<span id="cart-count-inline">0</span> productos)</span><strong id="cart-subtotal">$0</strong></div>
+              <div class="row-between"><span class="muted">Envio</span><strong style="color:#059669">Gratis</strong></div>
+              <div class="row-between"><span class="muted">Impuestos (15%)</span><strong id="cart-tax">$0</strong></div>
+            </div>
+            <div class="row-between" style="padding-top:12px; border-top:1px solid var(--border); margin-bottom:16px;"><strong>Total</strong><strong id="cart-total" style="font-size:28px; color:var(--accent)">$0</strong></div>
+            <button class="btn btn-primary" style="width:100%; justify-content:center;">Finalizar pedido <span class="material-icons">lock</span></button>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer"><div class="container footer-grid"><div><h3 style="font-size:30px; font-family: Inter, sans-serif; font-weight:900; margin-bottom:12px;">MODERNA</h3><p>Elevamos tu estilo con piezas exclusivas y calidad inigualable.</p></div><div><h4>Explorar</h4><p><a href="index.html">Inicio</a></p><p><a href="catalogo.html">Colecciones</a></p><p><a href="sobre-nosotros.html">Nuestra Historia</a></p><p><a href="contacto.html">Contacto</a></p></div><div><h4>Ayuda</h4><p><a href="preguntas-frecuentes.html">Centro de Ayuda</a></p><p><a href="politicas-de-devolucion.html">Devoluciones</a></p><p><a href="terminos-y-condiciones.html">Terminos Legales</a></p><p><a href="envios.html">Seguimiento</a></p></div></div></footer>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
+

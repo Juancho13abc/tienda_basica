@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderna Store - Producto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="product">
+  <div class="layout">
+    <nav class="navbar">
+      <div class="container nav-row">
+        <a href="index.html" class="brand"><span class="brand-icon material-icons">shopping_bag</span><span>MODERNA</span></a>
+        <div class="nav-links"><a href="index.html">Inicio</a><a href="catalogo.html" class="active">Catalogo</a><a href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+        <div class="nav-actions"><form class="nav-search-desktop" data-search-form><input name="search" class="search-input" placeholder="Buscar..."></form><a class="icon-btn" href="login.html"><span class="material-icons">person_outline</span></a><a class="icon-btn" href="carrito.html"><span class="material-icons">shopping_cart</span><span class="badge" data-cart-count>0</span></a></div>
+      </div>
+    </nav>
+
+    <main class="detail page">
+      <div class="container">
+        <p id="product-breadcrumb" class="kicker" style="color:#64748b; margin-bottom:14px;">Inicio / Catalogo / Producto</p>
+        <div class="detail-grid">
+          <div>
+            <div class="gallery-main"><img id="product-main-image" alt="Producto" style="width:100%; height:100%; object-fit:cover;"></div>
+            <div class="gallery-thumbs" id="product-thumbs"></div>
+          </div>
+          <div class="detail-panel">
+            <div class="row-between"><span id="product-category" class="card-cat"></span><span id="product-brand" class="muted"></span></div>
+            <h1 id="product-name" class="section-title" style="font-size:44px"></h1>
+            <p id="product-price" class="price"></p>
+            <p id="product-description" class="muted" style="line-height:1.7"></p>
+
+            <div id="product-size-wrap" style="display:none;">
+              <p class="filter-title" style="margin-bottom:8px;">Seleccionar talla</p>
+              <div class="pill-group" id="product-sizes"></div>
+            </div>
+
+            <div id="product-color-wrap" style="display:none;">
+              <p class="filter-title" style="margin-bottom:8px;">Seleccionar color</p>
+              <div class="pill-group" id="product-colors"></div>
+            </div>
+
+            <div class="row-between">
+              <div class="qty-box"><button id="product-qty-dec" type="button">-</button><span id="product-qty">1</span><button id="product-qty-inc" type="button">+</button></div>
+              <small id="product-stock" class="muted"></small>
+            </div>
+
+            <button id="product-add-cart" class="btn btn-primary">Anadir al carrito <span class="material-icons">shopping_cart</span></button>
+          </div>
+        </div>
+
+        <section class="section" style="padding-bottom:0">
+          <h3 style="margin-bottom:14px">Productos <span class="accent">Relacionados</span></h3>
+          <div id="related-grid" class="grid grid-4"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer"><div class="container footer-grid"><div><h3 style="font-size:30px; font-family: Inter, sans-serif; font-weight:900; margin-bottom:12px;">MODERNA</h3><p>Elevamos tu estilo con piezas exclusivas y calidad inigualable.</p></div><div><h4>Explorar</h4><p><a href="index.html">Inicio</a></p><p><a href="catalogo.html">Colecciones</a></p><p><a href="sobre-nosotros.html">Nuestra Historia</a></p><p><a href="contacto.html">Contacto</a></p></div><div><h4>Ayuda</h4><p><a href="preguntas-frecuentes.html">Centro de Ayuda</a></p><p><a href="politicas-de-devolucion.html">Devoluciones</a></p><p><a href="terminos-y-condiciones.html">Terminos Legales</a></p><p><a href="envios.html">Seguimiento</a></p></div></div></footer>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
+

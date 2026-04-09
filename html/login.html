@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moderna Store - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="login">
+  <div class="layout auth-layout">
+    <nav class="navbar">
+      <div class="container nav-row">
+        <a href="index.html" class="brand"><span class="brand-icon material-icons">shopping_bag</span><span>MODERNA</span></a>
+        <div class="nav-links"><a href="index.html">Inicio</a><a href="catalogo.html">Catalogo</a><a href="sobre-nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></div>
+        <div class="nav-actions">
+          <a class="icon-btn" href="login.html"><span class="material-icons">person_outline</span></a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="page auth-page">
+      <section class="auth-card-wrap container">
+        <div class="auth-grid">
+          <aside class="auth-aside">
+            <p class="kicker">Acceso Rapido</p>
+            <h2>Bienvenido de vuelta</h2>
+            <p>Ingresa con tus credenciales o usa una cuenta demo para probar la tienda en segundos.</p>
+            <div class="auth-demo-box">
+              <p><strong>Admin:</strong> admin@moderna.co / Admin2026*</p>
+              <p><strong>Cliente:</strong> cliente@moderna.co / Cliente2026*</p>
+            </div>
+            <div class="auth-demo-actions">
+              <button type="button" class="btn btn-outline-soft" data-demo-login="admin">Usar Admin</button>
+              <button type="button" class="btn btn-outline-soft" data-demo-login="customer">Usar Cliente</button>
+            </div>
+          </aside>
+
+          <article class="auth-card">
+            <div class="auth-card-head">
+              <p class="kicker" style="color:#64748b;">Bienvenido</p>
+              <h1 class="section-title" style="font-size:42px;">Iniciar Sesion</h1>
+              <p class="muted">Ingresa con tu cuenta para continuar comprando.</p>
+            </div>
+
+            <form id="login-form" class="auth-form" autocomplete="on">
+              <label class="auth-label" for="login-email">Correo</label>
+              <input id="login-email" name="email" type="email" class="text-input" placeholder="correo@ejemplo.com" required>
+
+              <label class="auth-label" for="login-password">Contrasena</label>
+              <input id="login-password" name="password" type="password" class="text-input" placeholder="Tu contrasena" required>
+
+              <div class="auth-row-between">
+                <label class="auth-check"><input type="checkbox" id="login-remember"> Recordarme en este equipo</label>
+                <a class="auth-link" href="recuperar.html">Olvide mi contrasena</a>
+              </div>
+              <button class="btn btn-primary" type="submit">Entrar <span class="material-icons">login</span></button>
+              <p id="login-error" class="auth-error" aria-live="polite"></p>
+            </form>
+
+            <div class="auth-foot">
+              <p class="muted">No tienes cuenta?</p>
+              <a href="registro.html" class="auth-link">Crear cuenta</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container footer-grid"><div><h3 style="font-size:30px; font-family: Inter, sans-serif; font-weight:900; margin-bottom:12px;">MODERNA</h3><p>Elevamos tu estilo con piezas exclusivas y calidad inigualable.</p></div><div><h4>Explorar</h4><p><a href="index.html">Inicio</a></p><p><a href="catalogo.html">Colecciones</a></p><p><a href="sobre-nosotros.html">Nuestra Historia</a></p><p><a href="contacto.html">Contacto</a></p></div><div><h4>Ayuda</h4><p><a href="preguntas-frecuentes.html">Centro de Ayuda</a></p><p><a href="politicas-de-devolucion.html">Devoluciones</a></p><p><a href="terminos-y-condiciones.html">Terminos Legales</a></p><p><a href="envios.html">Seguimiento</a></p></div></div></footer>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
